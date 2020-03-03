@@ -23,7 +23,7 @@ public class Price {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj instanceof Price) {
+        if (Price.class.equals(obj.getClass())) {
             Price p = (Price) obj;
             return productCode.equals(p.getProductCode()) && number == p.getNumber() &&
                     depart == p.getDepart() && begin.compareTo(p.getBegin()) == 0 &&
